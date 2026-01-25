@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>印尼投资法律法规库</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .search-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .category-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 0.6rem 1.5rem;
+            border: none;
+            background: white;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .tab-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .laws-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .law-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .law-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .law-card h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .law-card .category {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            margin-bottom: 0.8rem;
+            color: #666;
+        }
+
+        .law-card .date {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .law-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            background: white;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #999;
+            background: none;
+            border: none;
+        }
+
+        .close-btn:hover {
+            color: #333;
+        }
+
+        .modal-content h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .modal-content .meta {
+            color: #999;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .laws-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🇮🇩 印尼投资法律法规库</h1>
+        <p>Indonesian Investment Laws and Regulations Database</p>
+    </header>
+
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="搜索法律法规名称、编号或关键词...">
+        </div>
+
+        <div class="category-tabs">
+            <button class="tab-btn active" data-category="all">全部</button>
+            <button class="tab-btn" data-category="investment">投资法</button>
+            <button class="tab-btn" data-category="company">公司法</button>
+            <button class="tab-btn" data-category="tax">税务法</button>
+            <button class="tab-btn" data-category="labor">劳动法</button>
+            <button class="tab-btn" data-category="trade">贸易法</button>
+        </div>
+
+        <div class="laws-grid" id="lawsGrid"></div>
+        <div class="no-results" id="noResults" style="display: none;">
+            未找到相关法律法规
+        </div>
+    </div>
+
+    <div class="modal" id="lawModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script>
+        // 法律法规数据（你可以在这里添加更多法规）
+        const laws = [
+            {
+                id: 1,
+                title: "投资法 2007年第25号",
+                number: "Law No. 25/2007",
+                category: "investment",
+                date: "2007-04-26",
+                summary: "规范印尼境内外国投资和国内投资的基本法律框架",
+                content: "本法规定了印尼投资的基本原则、投资者权利义务、投资便利化措施、投资领域限制等内容。适用于所有在印尼进行投资活动的国内外投资者。"
+            },
+            {
+                id: 2,
+                title: "创造就业综合法 2020年第11号",
+                number: "Law No. 11/2020",
+                category: "labor",
+                date: "2020-11-02",
+                summary: "全面改革印尼劳动、投资、营商环境的综合性法律",
+                content: "俗称'Omnibus Law'，对126项法律进行修订，涵盖投资便利化、就业创造、中小微企业扶持、投资管理等方面，是印尼近年来最重要的经济改革法案。"
+            },
+            {
+                id: 3,
+                title: "有限责任公司法 2007年第40号",
+                number: "Law No. 40/2007",
+                category: "company",
+                date: "2007-08-16",
+                summary: "规范有限责任公司设立、运营、解散的法律依据",
+                content: "详细规定了印尼有限责任公司（PT）的设立程序、股东权利义务、公司治理结构、财务报告要求等内容。"
+            },
+            {
+                id: 4,
+                title: "税收总则和程序法 2021年第7号",
+                number: "Law No. 7/2021",
+                category: "tax",
+                date: "2021-10-29",
+                summary: "税收征管的基本法律框架和程序规定",
+                content: "规定了税收征管的一般原则、纳税人权利义务、税务稽查程序、税收争议解决等内容，是印尼税收体系的基础性法律。"
+            },
+            {
+                id: 5,
+                title: "所得税法 2008年第36号",
+                number: "Law No. 36/2008",
+                category: "tax",
+                date: "2008-09-23",
+                summary: "规范个人和企业所得税的征收",
+                content: "详细规定了印尼个人所得税和企业所得税的税率、应税所得计算、税收优惠、预扣税等内容。"
+            },
+            {
+                id: 6,
+                title: "劳动法 2003年第13号",
+                number: "Law No. 13/2003",
+                category: "labor",
+                date: "2003-03-25",
+                summary: "规范劳动关系、劳动合同、工资福利的基本法律",
+                content: "规定了劳动合同类型、工作时间、最低工资、解雇程序、劳动争议解决等内容，是保护劳动者权益的重要法律。"
+            },
+            {
+                id: 7,
+                title: "贸易法 2014年第7号",
+                number: "Law No. 7/2014",
+                category: "trade",
+                date: "2014-03-11",
+                summary: "规范国内外贸易活动的法律框架",
+                content: "涵盖贸易政策、贸易商品标准、贸易促进、贸易保护措施、消费者保护等内容。"
+            },
+            {
+                id: 8,
+                title: "外汇管理条例",
+                number: "BI Regulation No. 24/4/PBI/2022",
+                category: "investment",
+                date: "2022-03-15",
+                summary: "印尼中央银行关于外汇交易和跨境资金流动的规定",
+                content: "规范外汇交易、跨境支付、外汇风险对冲等活动，旨在维护汇率稳定和金融系统稳定。"
+            }
+        ];
+
+        let currentCategory = 'all';
+        let searchTerm = '';
+
+        // 渲染法律法规列表
+        function renderLaws() {
+            const grid = document.getElementById('lawsGrid');
+            const noResults = document.getElementById('noResults');
+            
+            let filteredLaws = laws.filter(law => {
+                const matchCategory = currentCategory === 'all' || law.category === currentCategory;
+                const matchSearch = searchTerm === '' || 
+                    law.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    law.number.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    law.summary.toLowerCase().includes(searchTerm.toLowerCase());
+                return matchCategory && matchSearch;
+            });
+
+            if (filteredLaws.length === 0) {
+                grid.innerHTML = '';
+                noResults.style.display = 'block';
+                return;
+            }
+
+            noResults.style.display = 'none';
+            grid.innerHTML = filteredLaws.map(law => `
+                <div class="law-card" onclick="showLawDetail(${law.id})">
+                    <span class="category">${getCategoryName(law.category)}</span>
+                    <h3>${law.title}</h3>
+                    <div class="date">${law.number} | ${law.date}</div>
+                    <p>${law.summary}</p>
+                </div>
+            `).join('');
+        }
+
+        // 获取分类中文名
+        function getCategoryName(category) {
+            const names = {
+                investment: '投资法',
+                company: '公司法',
+                tax: '税务法',
+                labor: '劳动法',
+                trade: '贸易法'
+            };
+            return names[category] || category;
+        }
+
+        // 显示法规详情
+        function showLawDetail(id) {
+            const law = laws.find(l => l.id === id);
+            if (!law) return;
+
+            const modal = document.getElementById('lawModal');
+            const content = document.getElementById('modalContent');
+            
+            content.innerHTML = `
+                <h2>${law.title}</h2>
+                <div class="meta">
+                    <strong>法规编号：</strong>${law.number}<br>
+                    <strong>颁布日期：</strong>${law.date}<br>
+                    <strong>类别：</strong>${getCategoryName(law.category)}
+                </div>
+                <h3>概述</h3>
+                <p>${law.summary}</p>
+                <h3>详细内容</h3>
+                <p>${law.content}</p>
+            `;
+            
+            modal.style.display = 'block';
+        }
+
+        // 关闭模态框
+        function closeModal() {
+            document.getElementById('lawModal').style.display = 'none';
+        }
+
+        // 分类标签点击事件
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentCategory = this.dataset.category;
+                renderLaws();
+            });
+        });
+
+        // 搜索功能
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            searchTerm = e.target.value;
+            renderLaws();
+        });
+
+        // 点击模态框外部关闭
+        window.onclick = function(event) {
+            const modal = document.getElementById('lawModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // 初始渲染
+        renderLaws();
+    </script>
+</body>
+</html>
