@@ -310,6 +310,18 @@
             color: #333;
         }
 
+        .original-link {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s;
+            border-bottom: 1px solid transparent;
+        }
+
+        .original-link:hover {
+            color: #764ba2;
+            border-bottom-color: #764ba2;
+        }
+
         .detail-section {
             margin-bottom: 2rem;
         }
@@ -617,6 +629,11 @@
                         <div class="meta-item">
                             <strong>类别：</strong><span>${getCategoryName(law.category)}</span>
                         </div>
+                        ${law.originalLink ? `
+                        <div class="meta-item">
+                            <strong>原链接：</strong><a href="${law.originalLink}" target="_blank" rel="noopener noreferrer" class="original-link">查看官方原文 ↗</a>
+                        </div>
+                        ` : ''}
                     </div>
                 </div>
 
