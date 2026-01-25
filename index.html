@@ -29,6 +29,11 @@
         header h1 {
             font-size: 2rem;
             margin-bottom: 0.5rem;
+            cursor: pointer;
+        }
+
+        header h1:hover {
+            opacity: 0.9;
         }
 
         header p {
@@ -98,6 +103,38 @@
         .contact-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .contact-info {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            display: none;
+        }
+
+        .contact-info.show {
+            display: block;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .contact-info strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 0.3rem;
         }
 
         .search-box {
@@ -197,58 +234,168 @@
             font-size: 0.95rem;
         }
 
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 1000;
-            overflow-y: auto;
-        }
-
-        .modal-content {
-            background: white;
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
-            border-radius: 10px;
-            position: relative;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            font-size: 2rem;
-            cursor: pointer;
-            color: #999;
-            background: none;
-            border: none;
-        }
-
-        .close-btn:hover {
-            color: #333;
-        }
-
-        .modal-content h2 {
-            color: #667eea;
-            margin-bottom: 1rem;
-        }
-
-        .modal-content .meta {
-            color: #999;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
         .no-results {
             text-align: center;
             padding: 3rem;
             color: #999;
+        }
+
+        /* 详情页样式 */
+        .detail-page {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 2rem;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background: #f5f5f5;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            color: #666;
+            transition: all 0.3s;
+            margin-bottom: 1.5rem;
+        }
+
+        .back-btn:hover {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .detail-header {
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .detail-header h1 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .detail-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .detail-meta .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .detail-meta .meta-item strong {
+            color: #333;
+        }
+
+        .detail-section {
+            margin-bottom: 2rem;
+        }
+
+        .detail-section h2 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .detail-section p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .detail-content {
+            color: #444;
+            line-height: 1.9;
+            font-size: 1.05rem;
+        }
+
+        .detail-content h3 {
+            color: #667eea;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .detail-content ul, .detail-content ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .detail-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .share-section {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .share-section h3 {
+            color: #333;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .share-link {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .share-link input {
+            flex: 1;
+            padding: 0.6rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: white;
+            font-size: 0.9rem;
+        }
+
+        .copy-btn {
+            padding: 0.6rem 1.5rem;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .copy-btn:hover {
+            background: #5568d3;
+        }
+
+        .hidden {
+            display: none;
         }
 
         @media (max-width: 768px) {
@@ -269,137 +416,166 @@
             .laws-grid {
                 grid-template-columns: 1fr;
             }
+
+            .detail-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .detail-meta {
+                gap: 1rem;
+            }
+
+            .share-link {
+                flex-direction: column;
+            }
+
+            .share-link input {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>🇮🇩 印尼投资法律法规库</h1>
+        <h1 onclick="goHome()">🇮🇩 印尼投资法律法规库</h1>
         <p>Indonesian Investment Laws and Regulations Database</p>
     </header>
 
     <div class="container">
         <div class="main-content">
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="搜索法律法规名称、编号或关键词...">
+            <!-- 列表页 -->
+            <div id="listPage">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="搜索法律法规名称、编号或关键词...">
+                </div>
+
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-category="all">全部</button>
+                    <button class="tab-btn" data-category="investment">投资法</button>
+                    <button class="tab-btn" data-category="company">公司法</button>
+                    <button class="tab-btn" data-category="tax">税务法</button>
+                    <button class="tab-btn" data-category="labor">劳动法</button>
+                    <button class="tab-btn" data-category="trade">贸易法</button>
+                </div>
+
+                <div class="laws-grid" id="lawsGrid"></div>
+                <div class="no-results" id="noResults" style="display: none;">
+                    未找到相关法律法规
+                </div>
             </div>
 
-            <div class="category-tabs">
-                <button class="tab-btn active" data-category="all">全部</button>
-                <button class="tab-btn" data-category="investment">投资法</button>
-                <button class="tab-btn" data-category="company">公司法</button>
-                <button class="tab-btn" data-category="tax">税务法</button>
-                <button class="tab-btn" data-category="labor">劳动法</button>
-                <button class="tab-btn" data-category="trade">贸易法</button>
-            </div>
-
-            <div class="laws-grid" id="lawsGrid"></div>
-            <div class="no-results" id="noResults" style="display: none;">
-                未找到相关法律法规
+            <!-- 详情页 -->
+            <div id="detailPage" class="hidden">
+                <div class="detail-page">
+                    <button class="back-btn" onclick="goHome()">
+                        ← 返回列表
+                    </button>
+                    <div id="detailContent"></div>
+                </div>
             </div>
         </div>
 
         <aside class="sidebar">
             <div class="intro-card">
                 <h3>📋 网站简介</h3>
-                <p>这是一个实验性项目，旨在帮助投资者找到并了解印尼投资相关规定。</p>
+                <p>这是一个实验性项目,旨在帮助投资者找到并了解印尼投资相关规定。</p>
                 <p>所有法规来自印尼官方发布，所有法规解读来自于AI。</p>
                 <p>如有尚未列出的法规需要了解，请联系我们添加。</p>
-                <button class="contact-btn" onclick="alert('请发送邮件至：hutianye2012@gmail.com\n或添加微信：HUTIANYE2002')">
+                <button class="contact-btn" onclick="toggleContact()">
                     📧 联系我们
                 </button>
+                <div class="contact-info" id="contactInfo">
+                    <strong>📧 邮箱：</strong>
+                    contact@example.com
+                    <strong>💬 微信：</strong>
+                    YourWechatID
+                    <strong>📱 WhatsApp：</strong>
+                    +62-XXX-XXXX-XXXX
+                </div>
             </div>
         </aside>
     </div>
 
-    <div class="modal" id="lawModal">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closeModal()">&times;</button>
-            <div id="modalContent"></div>
-        </div>
-    </div>
-
+    <!-- 引入法律数据文件 -->
+    <script src="laws-data.js"></script>
+    
+    <!-- 主程序代码 -->
     <script>
-        // 法律法规数据（你可以在这里添加更多法规）
-        const laws = [
-            {
-                id: 1,
-                title: "投资法 2007年第25号",
-                number: "Law No. 25/2007",
-                category: "investment",
-                date: "2007-04-26",
-                summary: "规范印尼境内外国投资和国内投资的基本法律框架",
-                content: "本法规定了印尼投资的基本原则、投资者权利义务、投资便利化措施、投资领域限制等内容。适用于所有在印尼进行投资活动的国内外投资者。"
-            },
-            {
-                id: 2,
-                title: "创造就业综合法 2020年第11号",
-                number: "Law No. 11/2020",
-                category: "labor",
-                date: "2020-11-02",
-                summary: "全面改革印尼劳动、投资、营商环境的综合性法律",
-                content: "俗称'Omnibus Law'，对126项法律进行修订，涵盖投资便利化、就业创造、中小微企业扶持、投资管理等方面，是印尼近年来最重要的经济改革法案。"
-            },
-            {
-                id: 3,
-                title: "有限责任公司法 2007年第40号",
-                number: "Law No. 40/2007",
-                category: "company",
-                date: "2007-08-16",
-                summary: "规范有限责任公司设立、运营、解散的法律依据",
-                content: "详细规定了印尼有限责任公司（PT）的设立程序、股东权利义务、公司治理结构、财务报告要求等内容。"
-            },
-            {
-                id: 4,
-                title: "税收总则和程序法 2021年第7号",
-                number: "Law No. 7/2021",
-                category: "tax",
-                date: "2021-10-29",
-                summary: "税收征管的基本法律框架和程序规定",
-                content: "规定了税收征管的一般原则、纳税人权利义务、税务稽查程序、税收争议解决等内容，是印尼税收体系的基础性法律。"
-            },
-            {
-                id: 5,
-                title: "所得税法 2008年第36号",
-                number: "Law No. 36/2008",
-                category: "tax",
-                date: "2008-09-23",
-                summary: "规范个人和企业所得税的征收",
-                content: "详细规定了印尼个人所得税和企业所得税的税率、应税所得计算、税收优惠、预扣税等内容。"
-            },
-            {
-                id: 6,
-                title: "劳动法 2003年第13号",
-                number: "Law No. 13/2003",
-                category: "labor",
-                date: "2003-03-25",
-                summary: "规范劳动关系、劳动合同、工资福利的基本法律",
-                content: "规定了劳动合同类型、工作时间、最低工资、解雇程序、劳动争议解决等内容，是保护劳动者权益的重要法律。"
-            },
-            {
-                id: 7,
-                title: "贸易法 2014年第7号",
-                number: "Law No. 7/2014",
-                category: "trade",
-                date: "2014-03-11",
-                summary: "规范国内外贸易活动的法律框架",
-                content: "涵盖贸易政策、贸易商品标准、贸易促进、贸易保护措施、消费者保护等内容。"
-            },
-            {
-                id: 8,
-                title: "外汇管理条例",
-                number: "BI Regulation No. 24/4/PBI/2022",
-                category: "investment",
-                date: "2022-03-15",
-                summary: "印尼中央银行关于外汇交易和跨境资金流动的规定",
-                content: "规范外汇交易、跨境支付、外汇风险对冲等活动，旨在维护汇率稳定和金融系统稳定。"
-            }
-        ];
-
         let currentCategory = 'all';
         let searchTerm = '';
+        let currentView = 'list';
 
-        // 渲染法律法规列表
+        // 页面路由
+        function showList() {
+            document.getElementById('listPage').classList.remove('hidden');
+            document.getElementById('detailPage').classList.add('hidden');
+            currentView = 'list';
+            window.scrollTo(0, 0);
+        }
+
+        function showDetail(lawId) {
+            const law = laws.find(l => l.id === lawId);
+            if (!law) return;
+
+            document.getElementById('listPage').classList.add('hidden');
+            document.getElementById('detailPage').classList.remove('hidden');
+            currentView = 'detail';
+
+            const detailContent = document.getElementById('detailContent');
+            detailContent.innerHTML = `
+                <div class="detail-header">
+                    <h1>${law.title}</h1>
+                    <div class="detail-meta">
+                        <div class="meta-item">
+                            <strong>法规编号：</strong><span>${law.number}</span>
+                        </div>
+                        <div class="meta-item">
+                            <strong>颁布日期：</strong><span>${law.date}</span>
+                        </div>
+                        <div class="meta-item">
+                            <strong>类别：</strong><span>${getCategoryName(law.category)}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <h2>📋 概述</h2>
+                    <p>${law.summary}</p>
+                </div>
+
+                <div class="detail-section">
+                    <h2>📖 详细内容</h2>
+                    <div class="detail-content">
+                        ${law.content}
+                    </div>
+                </div>
+
+                <div class="share-section">
+                    <h3>🔗 分享此法规</h3>
+                    <div class="share-link">
+                        <input type="text" id="shareUrl" value="${window.location.origin}${window.location.pathname}#law-${law.id}" readonly>
+                        <button class="copy-btn" onclick="copyShareLink()">复制链接</button>
+                    </div>
+                </div>
+            `;
+
+            window.location.hash = `law-${lawId}`;
+            window.scrollTo(0, 0);
+        }
+
+        function goHome() {
+            showList();
+            window.location.hash = '';
+            renderLaws();
+        }
+
+        function copyShareLink() {
+            const input = document.getElementById('shareUrl');
+            input.select();
+            document.execCommand('copy');
+            alert('链接已复制到剪贴板！');
+        }
+
         function renderLaws() {
             const grid = document.getElementById('lawsGrid');
             const noResults = document.getElementById('noResults');
@@ -421,7 +597,7 @@
 
             noResults.style.display = 'none';
             grid.innerHTML = filteredLaws.map(law => `
-                <div class="law-card" onclick="showLawDetail(${law.id})">
+                <div class="law-card" onclick="showDetail(${law.id})">
                     <span class="category">${getCategoryName(law.category)}</span>
                     <h3>${law.title}</h3>
                     <div class="date">${law.number} | ${law.date}</div>
@@ -430,7 +606,6 @@
             `).join('');
         }
 
-        // 获取分类中文名
         function getCategoryName(category) {
             const names = {
                 investment: '投资法',
@@ -442,36 +617,6 @@
             return names[category] || category;
         }
 
-        // 显示法规详情
-        function showLawDetail(id) {
-            const law = laws.find(l => l.id === id);
-            if (!law) return;
-
-            const modal = document.getElementById('lawModal');
-            const content = document.getElementById('modalContent');
-            
-            content.innerHTML = `
-                <h2>${law.title}</h2>
-                <div class="meta">
-                    <strong>法规编号：</strong>${law.number}<br>
-                    <strong>颁布日期：</strong>${law.date}<br>
-                    <strong>类别：</strong>${getCategoryName(law.category)}
-                </div>
-                <h3>概述</h3>
-                <p>${law.summary}</p>
-                <h3>详细内容</h3>
-                <p>${law.content}</p>
-            `;
-            
-            modal.style.display = 'block';
-        }
-
-        // 关闭模态框
-        function closeModal() {
-            document.getElementById('lawModal').style.display = 'none';
-        }
-
-        // 分类标签点击事件
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -481,22 +626,35 @@
             });
         });
 
-        // 搜索功能
         document.getElementById('searchInput').addEventListener('input', function(e) {
             searchTerm = e.target.value;
             renderLaws();
         });
 
-        // 点击模态框外部关闭
-        window.onclick = function(event) {
-            const modal = document.getElementById('lawModal');
-            if (event.target === modal) {
-                closeModal();
+        function handleHash() {
+            const hash = window.location.hash;
+            if (hash.startsWith('#law-')) {
+                const lawId = parseInt(hash.replace('#law-', ''));
+                if (laws.find(l => l.id === lawId)) {
+                    showDetail(lawId);
+                    return;
+                }
             }
+            showList();
         }
 
-        // 初始渲染
-        renderLaws();
+        window.addEventListener('hashchange', handleHash);
+
+        // 切换联系方式显示
+        function toggleContact() {
+            const contactInfo = document.getElementById('contactInfo');
+            contactInfo.classList.toggle('show');
+        }
+
+        handleHash();
+        if (currentView === 'list') {
+            renderLaws();
+        }
     </script>
 </body>
 </html>
