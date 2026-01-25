@@ -16,52 +16,37 @@
     "category": "investment",
     "date": "2025-10-01",
     "summary": "该法规为《2025年第28号政府条例》的实施细则",
-    "content": "<h3>法规概况</h3>
-<p>本文件为<strong>《2025年第5号投资部长/投资协调委员会主席条例》</strong>（Peraturan Menteri Investasi dan Hilirisasi/Kepala BKPM No. 5 Tahun 2025）。该条例作为《2025年第28号政府条例》的实施细则，旨在为通过<strong>电子集成系统（OSS）</strong>实施基于风险的商业许可（PBBR）和投资便利提供明确的操作指南与法律确定性,。</p>
-
-<h3>核心许可流程 (PBBR)</h3>
-<p>商业许可根据业务活动的风险等级进行分类处理，所有流程均通过OSS系统进行：</p>
-<ul>
-<li><strong>低风险 (Risiko Rendah):</strong> 仅需申请 <strong>NIB</strong>（商业登记号）。NIB同时作为合法性证明、进口识别号（API）、海关访问权限以及环境管理承诺（SPPL）,。</li>
-<li><strong>中低风险 (Risiko Menengah Rendah):</strong> 需申请 <strong>NIB + 标准证书</strong>。企业在系统中填报自我声明后，系统自动签发标准证书，无需事前核查。</li>
-<li><strong>中高风险 (Risiko Menengah Tinggi):</strong> 需申请 <strong>NIB + 标准证书</strong>。标准证书需经过相关政府部门的<strong>技术核查 (Verifikasi)</strong> 后方可生效，作为运营许可,。</li>
-<li><strong>高风险 (Risiko Tinggi):</strong> 需申请 <strong>NIB + 许可证 (Izin)</strong>。必须经过全面的技术审查和审批。在满足所有要求前，系统仅发放"未满足要求"的许可证，主要用于准备阶段。</li>
-</ul>
-
-<h3>基本要求 (Persyaratan Dasar)</h3>
-<p>在申请商业许可之前或过程中，企业必须满足以下三项基本要求，这些要求已整合进OSS系统流程中：</p>
-<ol>
-<li><strong>空间利用适用性 (KKPR):</strong> 确认业务地点符合空间规划。包括陆地KKPR和海洋空间利用（KKPRL）。如果已有详细空间规划（RDTR），系统可自动签发确认书,。</li>
-<li><strong>环境批准 (Persetujuan Lingkungan):</strong> 根据风险等级分为环境影响分析（AMDAL）、环境管理监测方案（UKL-UPL）或环境管理承诺书（SPPL）。涉及高风险环境影响的项目需经过可行性测试,。</li>
-<li><strong>建筑许可 (PBG) 与运营资格 (SLF):</strong> 涉及建筑物的建设需申请PBG，完工后需申请SLF。这些申请需符合技术标准并通过系统集成办理,。</li>
-</ol>
-
-<h3>投资便利与财政优惠</h3>
-<p>条例详细规定了通过OSS系统申请各类投资便利的程序，主要包括：</p>
-<ul>
-<li><strong>进口关税减免 (Masterlist):</strong> 针对建设或开发工业所需的机器、货物和材料，可申请免征进口关税。</li>
-<li><strong>企业所得税减免 (Tax Holiday):</strong> 为特定行业的先锋产业提供企业所得税减免优惠。</li>
-<li><strong>所得税津贴 (Tax Allowance):</strong> 针对特定行业或地区的投资提供所得税抵扣。</li>
-<li><strong>超级抵扣 (Super Deduction):</strong> 针对开展职业培训（Vokasi）、研发（Litbang）活动的企业提供总收入扣除优惠,。</li>
-<li><strong>经济特区 (KEK) 与新首都 (IKN):</strong> 专门针对这些区域内的投资提供特殊的税收和海关优惠申请通道,。</li>
-</ul>
-
-<h3>外国代表处与特殊实体</h3>
-<p>针对非印尼法人实体的外国商业存在，规定了具体的注册与许可流程：</p>
-<ul>
-<li><strong>外国公司代表处 (KPPA):</strong> 需申请NIB，作为监督、联络或协调机构，不得从事商业交易,。</li>
-<li><strong>外国贸易代表处 (KP3A):</strong> 需申请NIB和SIUP3A，分为一般贸易代表处和电商代表处（PMSE）,。</li>
-<li><strong>外国建筑服务代表处 (BUJKA):</strong> 需申请NIB，并与本地建筑公司组成联合运营（KSO）方可开展业务,。</li>
-<li><strong>外国电力辅助服务代表处 (KPJPTLA):</strong> 需申请NIB及相关许可。</li>
-</ul>
-
-<h3>合规义务与监管 (LKPM)</h3>
-<p>企业在获得许可后必须履行以下义务，否则将面临行政制裁,：</p>
-<ul>
-<li><strong>投资活动报告 (LKPM):</strong> 所有企业（小微企业除外，根据规定）必须定期通过OSS系统提交LKPM。中大型企业需每季度报告一次。</li>
-<li><strong>监管与制裁:</strong> 政府将进行系统化监管（包括现场检查）。违规企业可能面临<strong>书面警告、暂停业务、冻结或许可证撤销</strong>等制裁,。</li>
-<li><strong>社会责任与培训:</strong> 企业需履行企业社会责任（CSR），并对聘用的外籍员工（TKA）实施向印尼员工的技术转移和培训。</li>
-</ul>",
+    "content": "<h3>法规概况</h3>\n<p>本文件为<strong>《2025年第5号投资部长/投资协调委员会主席条例》</strong>（Peraturan Menteri Investasi dan Hilirisasi/Kepala BKPM No. 5 Tahun 2025）。该条例作为《2025年第28号政府条例》的实施细则，旨在为通过<strong>电子集成系统（OSS）</strong>实施基于风险的商业许可（PBBR）和投资便利提供明确的操作指南与法律确定性,。</p>\n\n<h3>核心许可流程 (PBBR)</h3>\n<p>商业许可根据业务活动的风险等级进行分类处理，所有流程均通过OSS系统进行：</p>\n<ul>\n<li><strong>低风险 (Risiko Rendah):</strong> 仅需申请 <strong>NIB</strong>（商业登记号）。NIB同时作为合法性证明、进口识别号（API）、海关访问权限以及环境管理承诺（SPPL）,。</li>\n<li><strong>中低风险 (Risiko Menengah Rendah):</strong> 需申请 <strong>NIB + 标准证书</strong>。企业在系统中填报自我声明后，系统自动签发标准证书，无需事前核查。</li>\n<li><strong>中高风险 (Risiko Menengah Tinggi):</strong> 需申请 <strong>NIB + 标准证书</strong>。标准证书需经过相关政府部门的<strong>技术核查 (Verifikasi)</strong> 后方可生效，作为运营许可,。</li>\n<li><strong>高风险 (Risiko Tinggi):</strong> 需申请 <strong>NIB + 许可证 (Izin)</strong>。必须经过全面的技术审查和审批。在满足所有要求前，系统仅发放\"未满足要求\"的许可证，主要用于准备阶段。</li>\n</ul>\n\n<h3>基本要求 (Persyaratan Dasar)</h3>\n<p>在申请商业许可之前或过程中，企业必须满足以下三项基本要求，这些要求已整合进OSS系统流程中：</p>\n<ol>\n<li><strong>空间利用适用性 (KKPR):</strong> 确认业务地点符合空间规划。包括陆地KKPR和海洋空间利用（KKPRL）。如果已有详细空间规划（RDTR），系统可自动签发确认书,。</li>\n<li><strong>环境批准 (Persetujuan Lingkungan):</strong> 根据风险等级分为环境影响分析（AMDAL）、环境管理监测方案（UKL-UPL）或环境管理承诺书（SPPL）。涉及高风险环境影响的项目需经过可行性测试,。</li>\n<li><strong>建筑许可 (PBG) 与运营资格 (SLF):</strong> 涉及建筑物的建设需申请PBG，完工后需申请SLF。这些申请需符合技术标准并通过系统集成办理,。</li>\n</ol>\n\n<h3>投资便利与财政优惠</h3>\n<p>条例详细规定了通过OSS系统申请各类投资便利的程序，主要包括：</p>\n<ul>\n<li><strong>进口关税减免 (Masterlist):</strong> 针对建设或开发工业所需的机器、货物和材料，可申请免征进口关税。</li>\n<li><strong>企业所得税减免 (Tax Holiday):</strong> 为特定行业的先锋产业提供企业所得税减免优惠。</li>\n<li><strong>所得税津贴 (Tax Allowance):</strong> 针对特定行业或地区的投资提供所得税抵扣。</li>\n<li><strong>超级抵扣 (Super Deduction):</strong> 针对开展职业培训（Vokasi）、研发（Litbang）活动的企业提供总收入扣除优惠,。</li>\n<li><strong>经济特区 (KEK) 与新首都 (IKN):</strong> 专门针对这些区域内的投资提供特殊的税收和海关优惠申请通道,。</li>\n</ul>\n\n<h3>外国代表处与特殊实体</h3>\n<p>针对非印尼法人实体的外国商业存在，规定了具体的注册与许可流程：</p>\n<ul>\n<li><strong>外国公司代表处 (KPPA):</strong> 需申请NIB，作为监督、联络或协调机构，不得从事商业交易,。</li>\n<li><strong>外国贸易代表处 (KP3A):</strong> 需申请NIB和SIUP3A，分为一般贸易代表处和电商代表处（PMSE）,。</li>\n<li><strong>外国建筑服务代表处 (BUJKA):</strong> 需申请NIB，并与本地建筑公司组成联合运营（KSO）方可开展业务,。</li>\n<li><strong>外国电力辅助服务代表处 (KPJPTLA):</strong> 需申请NIB及相关许可。</li>\n</ul>\n\n<h3>合规义务与监管 (LKPM)</h3>\n<p>企业在获得许可后必须履行以下义务，否则将面临行政制裁,：</p>\n<ul>\n<li><strong>投资活动报告 (LKPM):</strong> 所有企业（小微企业除外，根据规定）必须定期通过OSS系统提交LKPM。中大型企业需每季度报告一次。</li>\n<li><strong>监管与制裁:</strong> 政府将进行系统化监管（包括现场检查）。违规企业可能面临<strong>书面警告、暂停业务、冻结或许可证撤销</strong>等制裁,。</li>\n<li><strong>社会责任与培训:</strong> 企业需履行企业社会责任（CSR），并对聘用的外籍员工（TKA）实施向印尼员工的技术转移和培训。</li>\n</ul>",
     "originalLink": "https://jdih.bkpm.go.id/id/document/peraturan-menteri-investasi-dan-hilirisasikepala-badan-koordinasi-penanaman-modal-nomor-5-tahun-2025-tentang-pedoman-dan-tata-cara-penyelenggaraan-perizinan-berusaha-berbasis-risiko-dan-fas"
+  },
+  {
+    "id": 3,
+    "title": "《环境管理条例 2021年第22号印尼政府条例》",
+    "number": "PP NOMOR 22 TAHUN 2021",
+    "category": "investment",
+    "date": "2021-02-02",
+    "summary": "这份文件旨在为印尼境内的环境保护与管理提供一个详尽的法律框架和操作规范。",
+    "content": "<h3>法规概况与背景</h3>\n<p>本文件为<strong>《2021年第22号政府条例》</strong>（PP No. 22 Tahun 2021），是《2020年第11号创造就业法》在环境保护领域的关键实施细则。该条例全面整合了此前的环境管理规定，涵盖了从环境审批到废物管理的各个方面，旨在平衡经济发展与环境保护。</p>\n\n<h3>核心环境批准制度 (Persetujuan Lingkungan)</h3>\n<p>所有企业在开展业务前必须获得环境批准，这是颁发商业许可（Perizinan Berusaha）的前提条件。根据业务对环境的影响程度，分为三类：</p>\n<ul>\n<li><strong>AMDAL (环境影响分析):</strong> 适用于对环境有<strong>重大影响</strong>的高风险业务。企业需编制环境影响分析报告（Andal）和环境管理与监测计划（RKL-RPL），并通过可行性测试。</li>\n<li><strong>UKL-UPL (环境管理与监测方案):</strong> 适用于影响较小但仍需进行技术管理的业务。企业需填报标准表格，经相关部门核查后实施。</li>\n<li><strong>SPPL (环境管理承诺书):</strong> 适用于低风险业务。通常直接整合进<strong>NIB (商业登记号)</strong> 中，作为企业遵守环境标准的自我声明。</li>\n</ul>\n\n<h3>技术批准 (Persetujuan Teknis/Pertek)</h3>\n<p>对于涉及特定污染物排放或废物处理的活动，企业在申请环境批准前，必须先获得<strong>技术批准</strong>。主要包括：</p>\n<ul>\n<li><strong>废水排放:</strong> 需证明符合废水质量标准，提供排放技术说明。</li>\n<li><strong>废气排放:</strong> 针对高排放源，需满足排放标准。</li>\n<li><strong>B3废物管理:</strong> 涉及危险废物的利用、处理、填埋等设施建设，需通过详细的技术核查。</li>\n<li><strong>交通影响分析:</strong> 针对可能造成交通拥堵的项目。</li>\n</ul>\n\n<h3>危险废物 (Limbah B3) 管理</h3>\n<p>条例对<strong>B3（危险及有毒）废物</strong>实施全流程严格监管，主要规定如下：</p>\n<ol>\n<li><strong>储存 (Penyimpanan):</strong> 产生者必须进行分类储存。储存设施需符合防渗漏、防洪标准。储存期限通常最长为<strong>90天</strong>（针对产生量较大的情况）。</li>\n<li><strong>运输 (Pengangkutan):</strong> 必须使用符合规定的封闭或开放式车辆。运输者需先获得环境与林业部的<strong>推荐信</strong>，再向交通部申请运输许可。</li>\n<li><strong>利用与处理:</strong> 鼓励将B3废物作为替代原料或能源。进行此类活动需获得专门的技术批准，并可能涉及试运行（Uji Coba）。</li>\n<li><strong>填埋 (Penimbunan):</strong> 必须在获得许可的最终填埋场进行，并需进行长期的环境监测（最长可达30年）。</li>\n</ol>\n\n<h3>合规、制裁与资金担保</h3>\n<p>为确保法规执行，设立了严格的保障和惩罚机制：</p>\n<ul>\n<li><strong>环境恢复担保金 (Dana Penjaminan):</strong> 从事高环境风险活动（如B3废物填埋）的企业，必须在政府指定的银行存入担保金，专门用于环境污染后的恢复工作。</li>\n<li><strong>行政制裁:</strong> 包括书面警告、政府强制措施（如暂停生产、查封设备）、冻结或撤销许可证。</li>\n<li><strong>罚款:</strong> 对特定违规行为（如无证经营、超标排放）设定了行政罚款，部分条款提及的罚款上限可达<strong>30亿印尼盾</strong>。</li>\n</ul>",
+    "originalLink": "https://peraturan.bpk.go.id/Details/161852/pp-no-22-tahun-2021"
+  },
+  {
+    "id": 4,
+    "title": "《综合法 2023年第6号法律》",
+    "number": "Undang-undang (UU) Nomor 6 Tahun 2023",
+    "category": "tax",
+    "date": "2023-03-31",
+    "summary": "这是一部采用综合法方法的法律，它一次性修改、删除或制定了涉及多个行业的数十项现行法律条款，旨在改善投资生态、创造就业机会并简化行政审批",
+    "content": "<h3>法律背景与改革框架</h3>\n<p>印尼财政监管体系正处于历史性转折点，其核心法律基石是<strong>2021年第7号法律（《税收法规协调法》，简称UU HPP）</strong>。该法案旨在重构旧有框架，通过拓宽税基、提升行政透明度与维护社会公平来实现财政的可持续性。</p>\n<ul>\n<li><strong>立法层级：</strong>税收监管由法律（UU）、政府条例（PP）、财政部长条例（PMK）及税务总局长条例（PER）组成，其中<strong>PMK</strong>对纳税人最具直接操作指导意义。</li>\n<li><strong>核心改革：</strong>引入碳税、自愿披露计划（PPS），并推进<strong>个人身份号码（NIK）与纳税人识别号（NPWP）</strong>的合并，以降低合规门槛。</li>\n</ul>\n\n<h3>增值税（PPN）变革与2025年执行策略</h3>\n<p>虽然UU HPP规定2025年法定增值税率升至<strong>12%</strong>，但政府通过调整计税基数实施了缓冲机制，以缓解社会冲击。</p>\n<ul>\n<li><strong>有效税率11%机制：</strong>针对非奢侈品实施“11/12”计税基数（DPP Nilai Lain）机制，使得普通商品的实际有效税率仍维持在<strong>11%</strong>。</li>\n<li><strong>奢侈品全额征税：</strong>售价超<strong>20亿印尼盾</strong>的汽车、超<strong>300亿印尼盾</strong>的豪宅、私人游艇等，需缴纳全额12%增值税及奢侈品销售税（PPnBM）。</li>\n<li><strong>豁免与优惠（DTP）：</strong>基本生活物资、医疗教育服务免税；<strong>20亿印尼盾以下</strong>的住宅及符合条件的电动汽车可享受“政府承担增值税”（PPN DTP）优惠。</li>\n</ul>\n\n<h3>所得税（PPh）重构与行业激励</h3>\n<p>所得税体系进行了结构性调整，以体现公平并支持特定行业发展，企业所得税维持在<strong>22%</strong>。</p>\n<ul>\n<li><strong>个人所得税级距调整：</strong>5%税率的年收入上限提至6000万印尼盾，并新增针对年收入超<strong>50亿印尼盾</strong>群体的<strong>35%</strong>最高税率档次。</li>\n<li><strong>2025-2026年定向激励：</strong>针对纺织、制鞋等劳动密集型产业，月薪不超过<strong>1000万印尼盾</strong>的员工可享受<strong>政府承担所得税（PPh 21 DTP）</strong>，雇主须将减免部分以现金形式发放给员工。</li>\n<li><strong>中小微企业（UMKM）优惠：</strong>年营业额低于5亿印尼盾免税；5亿至48亿印尼盾之间适用<strong>0.5%</strong>的最终税率。</li>\n<li><strong>实物福利（Natura）征税：</strong>原则上实物福利现被视为应税收入，但全员餐饮、工作必需品及边远地区设施等除外。</li>\n</ul>\n\n<h3>关税与跨境贸易监管</h3>\n<p>依据<strong>PMK 4/2025</strong>，印尼对进口物资实施精细化的分类与费率管理。</p>\n<ol>\n<li><strong>邮寄物资免税额：</strong>FOB <strong>3美元</strong>以下免征关税。</li>\n<li><strong>一般物资税率：</strong>价值3美元至1500美元的包裹，适用<strong>7.5%</strong>的统一税率。</li>\n<li><strong>敏感商品税率：</strong>纺织品、鞋类、箱包等不再享受低税率，适用<strong>15%-25%</strong>的特定高税率。</li>\n<li><strong>出口税：</strong>对矿产和金属征收出口税以支持产业下游化，税率基于参考价格动态调整。</li>\n</ol>\n\n<h3>2026年行政改革与合规要求</h3>\n<p>税务管理将从2026年起全面进入数字化时代，纳税人需提前做好系统对接与数据合规准备。</p>\n<ul>\n<li><strong>Coretax系统上线：</strong>2026年强制启用核心税务管理系统（SIAP），集成NIK与NPWP，支持预填报税表，大幅提高合规透明度。</li>\n<li><strong>电商扣缴延期：</strong>指定电商平台作为第三方扣缴义务人（代扣0.5%所得税）的政策已推迟至<strong>2026年2月</strong>执行。</li>\n<li><strong>全球最低税（GMT）：</strong>印尼致力于落实<strong>15%</strong>的全球最低税，可能对享受免税期的跨国企业征收补足税。</li>\n</ul>\n\n<h3>司法救济与执法趋势</h3>\n<p>法律在强化征管的同时，也引入了更温和的刑事治理原则和缺席审判制度。</p>\n<ul>\n<li><strong>最后手段原则（Ultimum Remedium）：</strong>鼓励纳税人通过补缴税款和罚金来豁免刑事起诉。</li>\n<li><strong>缺席审判：</strong>引入缺席审判制度，以追讨潜逃海外逃税者的资产。</li>\n<li><strong>纳税人权利：</strong>明确了税务审计前的“合规解释函”（SP2DK）回复时限，增强执法可预测性。</li>\n</ul>",
+    "originalLink": "https://peraturan.bpk.go.id/Details/246523/uu-no-6-tahun-2023"
+  },
+  {
+    "id": 5,
+    "title": "《邮寄物品进出口监管规定 财政部长2025年第4号条例》",
+    "number": "NOMOR 4 TAHUN 2025",
+    "category": "tax",
+    "date": "2025-01-06",
+    "summary": "该文件在结构上清晰地划定了邮寄物品的关税、消费税及进口税的征收标准，并针对不同身份的进口商（如个人或企业）与电子商务平台（PPMSE）设定了明确的报关责任。",
+    "content": "<h3>法律背景与改革框架</h3>\n<p>印尼财政监管体系正处于历史性转折点，其核心法律基石是<strong>2021年第7号法律（《税收法规协调法》，简称UU HPP）</strong>。该法案旨在重构旧有框架，通过拓宽税基、提升行政透明度与维护社会公平来实现财政的可持续性。</p>\n<ul>\n<li><strong>立法层级：</strong>税收监管由法律（UU）、政府条例（PP）、财政部长条例（PMK）及税务总局长条例（PER）组成，其中<strong>PMK</strong>对纳税人最具直接操作指导意义。</li>\n<li><strong>核心改革：</strong>引入碳税、自愿披露计划（PPS），并推进<strong>个人身份号码（NIK）与纳税人识别号（NPWP）</strong>的合并，以降低合规门槛。</li>\n</ul>\n\n<h3>增值税（PPN）变革与2025年执行策略</h3>\n<p>虽然UU HPP规定2025年法定增值税率升至<strong>12%</strong>，但政府通过调整计税基数实施了缓冲机制，以缓解社会冲击。</p>\n<ul>\n<li><strong>有效税率11%机制：</strong>针对非奢侈品实施“11/12”计税基数（DPP Nilai Lain）机制，使得普通商品的实际有效税率仍维持在<strong>11%</strong>。</li>\n<li><strong>奢侈品全额征税：</strong>售价超<strong>20亿印尼盾</strong>的汽车、超<strong>300亿印尼盾</strong>的豪宅、私人游艇等，需缴纳全额12%增值税及奢侈品销售税（PPnBM）。</li>\n<li><strong>豁免与优惠（DTP）：</strong>基本生活物资、医疗教育服务免税；<strong>20亿印尼盾以下</strong>的住宅及符合条件的电动汽车可享受“政府承担增值税”（PPN DTP）优惠。</li>\n</ul>\n\n<h3>所得税（PPh）重构与行业激励</h3>\n<p>所得税体系进行了结构性调整，以体现公平并支持特定行业发展，企业所得税维持在<strong>22%</strong>。</p>\n<ul>\n<li><strong>个人所得税级距调整：</strong>5%税率的年收入上限提至6000万印尼盾，并新增针对年收入超<strong>50亿印尼盾</strong>群体的<strong>35%</strong>最高税率档次。</li>\n<li><strong>2025-2026年定向激励：</strong>针对纺织、制鞋等劳动密集型产业，月薪不超过<strong>1000万印尼盾</strong>的员工可享受<strong>政府承担所得税（PPh 21 DTP）</strong>，雇主须将减免部分以现金形式发放给员工。</li>\n<li><strong>中小微企业（UMKM）优惠：</strong>年营业额低于5亿印尼盾免税；5亿至48亿印尼盾之间适用<strong>0.5%</strong>的最终税率。</li>\n<li><strong>实物福利（Natura）征税：</strong>原则上实物福利现被视为应税收入，但全员餐饮、工作必需品及边远地区设施等除外。</li>\n</ul>\n\n<h3>关税与跨境贸易监管</h3>\n<p>依据<strong>PMK 4/2025</strong>，印尼对进口物资实施精细化的分类与费率管理。</p>\n<ol>\n<li><strong>邮寄物资免税额：</strong>FOB <strong>3美元</strong>以下免征关税。</li>\n<li><strong>一般物资税率：</strong>价值3美元至1500美元的包裹，适用<strong>7.5%</strong>的统一税率。</li>\n<li><strong>敏感商品税率：</strong>纺织品、鞋类、箱包等不再享受低税率，适用<strong>15%-25%</strong>的特定高税率。</li>\n<li><strong>出口税：</strong>对矿产和金属征收出口税以支持产业下游化，税率基于参考价格动态调整。</li>\n</ol>\n\n<h3>2026年行政改革与合规要求</h3>\n<p>税务管理将从2026年起全面进入数字化时代，纳税人需提前做好系统对接与数据合规准备。</p>\n<ul>\n<li><strong>Coretax系统上线：</strong>2026年强制启用核心税务管理系统（SIAP），集成NIK与NPWP，支持预填报税表，大幅提高合规透明度。</li>\n<li><strong>电商扣缴延期：</strong>指定电商平台作为第三方扣缴义务人（代扣0.5%所得税）的政策已推迟至<strong>2026年2月</strong>执行。</li>\n<li><strong>全球最低税（GMT）：</strong>印尼致力于落实<strong>15%</strong>的全球最低税，可能对享受免税期的跨国企业征收补足税。</li>\n</ul>\n\n<h3>司法救济与执法趋势</h3>\n<p>法律在强化征管的同时，也引入了更温和的刑事治理原则和缺席审判制度。</p>\n<ul>\n<li><strong>最后手段原则（Ultimum Remedium）：</strong>鼓励纳税人通过补缴税款和罚金来豁免刑事起诉。</li>\n<li><strong>缺席审判：</strong>引入缺席审判制度，以追讨潜逃海外逃税者的资产。</li>\n<li><strong>纳税人权利：</strong>明确了税务审计前的“合规解释函”（SP2DK）回复时限，增强执法可预测性。</li>\n</ul>",
+    "originalLink": "https://peraturan.bpk.go.id/Details/313252/pmk-no-4-tahun-2025"
   }
 ]
