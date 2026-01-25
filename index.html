@@ -398,6 +398,60 @@
             display: none;
         }
 
+        /* 友情链接样式 */
+        footer {
+            background: white;
+            margin-top: 3rem;
+            padding: 2rem 1rem;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links h4 {
+            color: #333;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        .links-list {
+            display: inline-flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .links-list a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            padding: 0.3rem 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        .links-list a:hover {
+            color: #764ba2;
+            border-bottom-color: #764ba2;
+        }
+
+        .footer-copyright {
+            text-align: center;
+            color: #999;
+            font-size: 0.85rem;
+            padding-top: 1rem;
+            border-top: 1px solid #f0f0f0;
+        }
+
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.5rem;
@@ -431,6 +485,18 @@
 
             .share-link input {
                 width: 100%;
+            }
+
+            .footer-links h4 {
+                display: block;
+                margin-bottom: 0.5rem;
+            }
+
+            .links-list {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
             }
         }
     </style>
@@ -495,6 +561,23 @@
             </div>
         </aside>
     </div>
+
+    <!-- 友情链接区域 -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <h4>🔗 友情链接：</h4>
+                <div class="links-list">
+                    <a href="https://kbli.co.id/" target="_blank" rel="noopener noreferrer">KBLI检索</a>
+                    <!-- 在这里添加更多链接，格式如下： -->
+                    <!-- <a href="https://example.com" target="_blank" rel="noopener noreferrer">链接名称</a> -->
+                </div>
+            </div>
+            <div class="footer-copyright">
+                © 2026 印尼投资法律法规库 | 仅供参考，不构成法律意见
+            </div>
+        </div>
+    </footer>
 
     <!-- 引入法律数据文件 -->
     <script src="laws-data.js"></script>
