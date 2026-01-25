@@ -9,6 +9,7 @@ const laws = [
         category: "investment",  // 可选值: investment, company, tax, labor, trade
         date: "2007-04-26",
         summary: "规范印尼境内外国投资和国内投资的基本法律框架",
+        originalLink: "https://peraturan.bpk.go.id/Details/xxxxx",  // 可选字段，法规原文链接
         content: `
             <h3>法律背景</h3>
             <p>在这里填写详细内容...</p>
@@ -30,6 +31,7 @@ const laws = [
         category: "labor",
         date: "2020-11-02",
         summary: "全面改革印尼劳动、投资、营商环境的综合性法律",
+        originalLink: "https://jdih.setkab.go.id/xxxxx",  // 如果没有链接可以省略这一行
         content: `
             <h3>立法背景</h3>
             <p>俗称"Omnibus Law"...</p>
@@ -45,6 +47,7 @@ const laws = [
         category: "company",
         date: "2007-08-16",
         summary: "规范有限责任公司设立、运营、解散的法律依据",
+        // 没有原链接时可以不写 originalLink 字段
         content: `
             <h3>法律概述</h3>
             <p>你的详细内容...</p>
@@ -58,6 +61,12 @@ const laws = [
 // 注意事项：
 // 1. 每个法规的 id 必须唯一且递增
 // 2. category 必须是这5个之一: investment, company, tax, labor, trade
-// 3. content 中可以使用 HTML 标签: <h3>, <p>, <ul>, <li>, <ol>, <strong> 等
-// 4. 日期格式: YYYY-MM-DD
-// 5. 保存时确保文件编码为 UTF-8
+// 3. originalLink 是可选字段，有原文链接就填，没有可以省略
+// 4. content 中可以使用 HTML 标签: <h3>, <p>, <ul>, <li>, <ol>, <strong> 等
+// 5. 日期格式: YYYY-MM-DD
+// 6. 保存时确保文件编码为 UTF-8
+
+// 印尼官方法规网站参考：
+// - https://peraturan.bpk.go.id/ (国家审计署法规库)
+// - https://jdih.setkab.go.id/ (内阁秘书处法律文件)
+// - https://peraturan.go.id/ (统一法规门户)
