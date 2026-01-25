@@ -664,6 +664,7 @@
             currentView = 'detail';
 
             const detailContent = document.getElementById('detailContent');
+            // 渲染详情页内容
             detailContent.innerHTML = `
                 <div class="detail-header">
                     <h1>${law.title}</h1>
@@ -706,10 +707,35 @@
                 </div>
             `;
 
+            // --- 新增：SEO 结构化数据处理 ---
+            try {
+                const schemaData = {
+                    "@context": "https://schema.org",
+                    "@type": "LegislativeDocument",
+                    "name": law.title,
+                    "description": law.summary,
+                    "datePublished": law.date,
+                    "legislationIdentifier": law.number,
+                    "url": `${window.location.origin}${window.location.pathname}#law-${lawId}`
+                };
+
+                let schemaScript = document.getElementById('schema-data');
+                if (!schemaScript) {
+                    schemaScript = document.createElement('script');
+                    schemaScript.id = 'schema-data';
+                    schemaScript.type = 'application/ld+json';
+                    document.head.appendChild(schemaScript);
+                }
+                schemaScript.textContent = JSON.stringify(schemaData);
+            } catch (e) {
+                console.error("SEO Schema 插入失败:", e);
+            }
+            // --- 结构化数据处理结束 ---
+
             window.location.hash = `law-${lawId}`;
             window.scrollTo(0, 0);
         }
-
+        
         function goHome() {
             showList();
             window.location.hash = '';
