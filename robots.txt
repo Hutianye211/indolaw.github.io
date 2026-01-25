@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://indo-law.com/sitemap.xml
+
+# 不让搜索引擎索引编辑器
+Disallow: /editor.html
