@@ -16,7 +16,52 @@
     "category": "investment",
     "date": "2025-10-01",
     "summary": "该法规为《2025年第28号政府条例》的实施细则",
-    "content": "<h1>2025年第5号投资部长条例详细概况</h1>\n    <p><strong>文件名称：</strong> 关于通过电子集成系统（OSS）实施基于风险的商业许可和投资便利的指南与程序<a href=\"#cit1\" class=\"citation\">[1]</a>。</p>\n    <p><strong>目的：</strong> 为落实《2025年第28号关于基于风险的商业许可实施的政府条例》，提供具体的操作流程、标准和格式<a href=\"#cit2\" class=\"citation\">[2]</a>。</p>\n\n    <h2>1. OSS 系统管理与访问</h2>\n    <ul>\n        <li><strong>管理机构：</strong> OSS系统由投资与下游化部/投资协调委员会（BKPM）作为OSS机构进行开发、管理和运营<a href=\"#cit5\" class=\"citation\">[3]</a>。</li>\n        <li><strong>主要功能：</strong> 涵盖信息服务、基本要求处理、商业许可（PB）发放、投资便利申请、伙伴关系管理及监督检查<a href=\"#cit217\" class=\"citation\">[4]</a>。</li>\n        <li><strong>互操作性：</strong> OSS系统与财政部（税务/海关）、法律人权部（企业数据）、国土部（空间规划）、环境部（环境审批）及公共工程部（建筑许可）等系统进行数据集成与互联<a href=\"#cit230\" class=\"citation\">[5]</a>。</li>\n    </ul>\n\n    <h2>2. 基于风险的商业许可流程 (PBBR)</h2>\n    <p>根据业务活动的风险等级，文件详细规定了许可的获取流程和所需文件：</p>\n    \n    <h3>A. 风险等级分类与许可形式</h3>\n    <table>\n        <tr>\n            <th>风险等级</th>\n            <th>所需许可</th>\n            <th>流程特点</th>\n        </tr>\n        <tr>\n            <td><strong>低风险</strong></td>\n            <td>NIB (商业登记号)</td>\n            <td>NIB作为合法性证明，兼作环境管理承诺（SPPL），自动签发<a href=\"#cit118\" class=\"citation\">[6]</a><a href=\"#cit120\" class=\"citation\">[7]</a>。</td>\n        </tr>\n        <tr>\n            <td><strong>中低风险</strong></td>\n            <td>NIB + 标准证书</td>\n            <td>企业通过OSS系统提交自我声明后，系统自动签发标准证书，无需事前核查<a href=\"#cit120\" class=\"citation\">[7]</a>。</td>\n        </tr>\n        <tr>\n            <td><strong>中高风险</strong></td>\n            <td>NIB + 标准证书</td>\n            <td>先获得NIB和\"未核查\"标准证书。企业需上传技术文件，经政府部门核查（Verifikasi）通过后，系统签发\"已核查\"标准证书<a href=\"#cit122\" class=\"citation\">[8]</a><a href=\"#cit125\" class=\"citation\">[9]</a>。</td>\n        </tr>\n        <tr>\n            <td><strong>高风险</strong></td>\n            <td>NIB + 许可证 (Izin)</td>\n            <td>必须经过全面的技术审查和审批。在满足所有要求前，颁发\"未满足要求\"的许可证<a href=\"#cit128\" class=\"citation\">[10]</a><a href=\"#cit131\" class=\"citation\">[11]</a>。</td>\n        </tr>\n    </table>\n\n    <h3>B. 商业许可支持 (PB UMKU)</h3>\n    <p>对于支持主营业务所需的特定技术许可（如药监局许可、特定进出口许可等），必须通过OSS系统申请<strong>PB UMKU</strong>，其流程与主许可类似，分为自动批准或需核查<a href=\"#cit138\" class=\"citation\">[12]</a>。</p>\n\n    <h2>3. 基本要求 (Persyaratan Dasar) 的处理</h2>\n    <p>在申请商业许可前，企业必须通过OSS系统满足以下基本要求：</p>\n    <ul>\n        <li><strong>空间规划 (KKPR):</strong> 包括陆地和海洋（KKPRL）。如果已有详细规划（RDTR），系统自动确认；否则需经过评估流程<a href=\"#cit36\" class=\"citation\">[13]</a><a href=\"#cit54\" class=\"citation\">[14]</a>。</li>\n        <li><strong>环境批准 (Persetujuan Lingkungan):</strong>\n            <ul>\n                <li><strong>SPPL:</strong> 低风险，自动集成在NIB中<a href=\"#cit86\" class=\"citation\">[15]</a>。</li>\n                <li><strong>UKL-UPL:</strong> 中风险，需填报表格并通过行政及实质审查（5-15个工作日）<a href=\"#cit88\" class=\"citation\">[16]</a><a href=\"#cit92\" class=\"citation\">[17]</a>。</li>\n                <li><strong>AMDAL:</strong> 高风险，需编制ANDAL和RKL-RPL文件，经过可行性测试（约60个工作日）<a href=\"#cit95\" class=\"citation\">[18]</a><a href=\"#cit105\" class=\"citation\">[19]</a>。</li>\n            </ul>\n        </li>\n        <li><strong>建筑许可 (PBG & SLF):</strong> 涉及建筑技术标准的审查，通过SIMBG系统与OSS集成办理<a href=\"#cit107\" class=\"citation\">[20]</a><a href=\"#cit117\" class=\"citation\">[21]</a>。</li>\n    </ul>\n\n    <h2>4. 投资便利与财政优惠 (Fasilitas Penanaman Modal)</h2>\n    <p>文件提供了通过OSS申请各类财政激励的详细清单和流程：</p>\n    <ul>\n        <li><strong>进口关税减免 (Masterlist):</strong> 针对机器、货物和材料的进口关税豁免，适用于工业建设或发展<a href=\"#cit560\" class=\"citation\">[22]</a><a href=\"#cit565\" class=\"citation\">[23]</a>。</li>\n        <li><strong>所得税优惠:</strong>\n            <ul>\n                <li><strong>Tax Holiday:</strong> 企业所得税减免<a href=\"#cit164\" class=\"citation\">[24]</a><a href=\"#cit577\" class=\"citation\">[25]</a>。</li>\n                <li><strong>Tax Allowance:</strong> 特定行业或地区的投资所得税抵扣<a href=\"#cit163\" class=\"citation\">[26]</a>。</li>\n                <li><strong>职业培训与研发优惠:</strong> 针对研发活动和职业技能培训的各种超级抵扣（Super Deduction）<a href=\"#cit170\" class=\"citation\">[27]</a><a href=\"#cit171\" class=\"citation\">[28]</a>。</li>\n            </ul>\n        </li>\n        <li><strong>经济特区 (KEK) 与 新首都 (IKN):</strong> 专门章节规定了这些区域内的特殊税收优惠申请流程<a href=\"#cit166\" class=\"citation\">[29]</a><a href=\"#cit167\" class=\"citation\">[30]</a>。</li>\n    </ul>\n\n    <h2>5. 投资活动报告 (LKPM)</h2>\n    <p>所有企业必须定期通过OSS提交<strong>投资活动报告 (LKPM)</strong>：</p>\n    <ul>\n        <li><strong>小微企业:</strong> 每半年报告一次<a href=\"#cit780\" class=\"citation\">[31]</a>。</li>\n        <li><strong>中大型企业:</strong>\n            <ul>\n                <li><strong>筹备期:</strong> 每季度提交一次进度报告<a href=\"#cit808\" class=\"citation\">[32]</a>。</li>\n                <li><strong>运营期:</strong> 每季度提交一次生产和运营报告<a href=\"#cit831\" class=\"citation\">[33]</a>。</li>\n            </ul>\n        </li>\n        <li><strong>代表处:</strong> 根据类型每半年或每年提交一次报告<a href=\"#cit207\" class=\"citation\">[34]</a><a href=\"#cit864\" class=\"citation\">[35]</a>。</li>\n    </ul>\n\n    <h2>6. 监督与制裁 (Pengawasan & Sanksi)</h2>\n    <ul>\n        <li><strong>监督方式:</strong> 包括对LKPM的行政审查和现场检查（常规或突发）<a href=\"#cit298\" class=\"citation\">[36]</a>。现场检查人员需佩戴专用标识<a href=\"#cit895\" class=\"citation\">[37]</a>。</li>\n        <li><strong>合规评价:</strong> 根据检查结果，企业会被评为\"极好\"、\"好\"、\"较差\"或\"差\"<a href=\"#cit307\" class=\"citation\">[38]</a>。</li>\n        <li><strong>行政制裁:</strong> 违规企业将面临分级制裁，包括：\n            <ul>\n                <li>书面警告（第一、二、三次）<a href=\"#cit956\" class=\"citation\">[39]</a>。</li>\n                <li>暂停业务活动<a href=\"#cit960\" class=\"citation\">[40]</a>。</li>\n                <li>强制执行措施（Daya Paksa Polisional）<a href=\"#cit963\" class=\"citation\">[41]</a>。</li>\n                <li>撤销许可（Pencabutan）<a href=\"#cit968\" class=\"citation\">[42]</a>。</li>\n            </ul>\n        </li>\n    </ul>\n\n    <h2>7. 特殊行业与机构</h2>\n    <ul>\n        <li><strong>外国代表处:</strong> 规范了KPPA（一般代表处）、KP3A（贸易代表处）、BUJKA（建筑代表处）及KP3A PMSE（电商代表处）的注册与发证流程<a href=\"#cit176\" class=\"citation\">[43]</a><a href=\"#cit723\" class=\"citation\">[44]</a>。</li>\n        <li><strong>采矿业:</strong> 涉及优先申请采矿许可区域（WIUP/WIUPK）的NIB发放程序<a href=\"#cit191\" class=\"citation\">[45]</a>。</li>\n    </ul>",
+    "content": "<h3>法规概况</h3>
+<p>本文件为<strong>《2025年第5号投资部长/投资协调委员会主席条例》</strong>（Peraturan Menteri Investasi dan Hilirisasi/Kepala BKPM No. 5 Tahun 2025）。该条例作为《2025年第28号政府条例》的实施细则，旨在为通过<strong>电子集成系统（OSS）</strong>实施基于风险的商业许可（PBBR）和投资便利提供明确的操作指南与法律确定性,。</p>
+
+<h3>核心许可流程 (PBBR)</h3>
+<p>商业许可根据业务活动的风险等级进行分类处理，所有流程均通过OSS系统进行：</p>
+<ul>
+<li><strong>低风险 (Risiko Rendah):</strong> 仅需申请 <strong>NIB</strong>（商业登记号）。NIB同时作为合法性证明、进口识别号（API）、海关访问权限以及环境管理承诺（SPPL）,。</li>
+<li><strong>中低风险 (Risiko Menengah Rendah):</strong> 需申请 <strong>NIB + 标准证书</strong>。企业在系统中填报自我声明后，系统自动签发标准证书，无需事前核查。</li>
+<li><strong>中高风险 (Risiko Menengah Tinggi):</strong> 需申请 <strong>NIB + 标准证书</strong>。标准证书需经过相关政府部门的<strong>技术核查 (Verifikasi)</strong> 后方可生效，作为运营许可,。</li>
+<li><strong>高风险 (Risiko Tinggi):</strong> 需申请 <strong>NIB + 许可证 (Izin)</strong>。必须经过全面的技术审查和审批。在满足所有要求前，系统仅发放"未满足要求"的许可证，主要用于准备阶段。</li>
+</ul>
+
+<h3>基本要求 (Persyaratan Dasar)</h3>
+<p>在申请商业许可之前或过程中，企业必须满足以下三项基本要求，这些要求已整合进OSS系统流程中：</p>
+<ol>
+<li><strong>空间利用适用性 (KKPR):</strong> 确认业务地点符合空间规划。包括陆地KKPR和海洋空间利用（KKPRL）。如果已有详细空间规划（RDTR），系统可自动签发确认书,。</li>
+<li><strong>环境批准 (Persetujuan Lingkungan):</strong> 根据风险等级分为环境影响分析（AMDAL）、环境管理监测方案（UKL-UPL）或环境管理承诺书（SPPL）。涉及高风险环境影响的项目需经过可行性测试,。</li>
+<li><strong>建筑许可 (PBG) 与运营资格 (SLF):</strong> 涉及建筑物的建设需申请PBG，完工后需申请SLF。这些申请需符合技术标准并通过系统集成办理,。</li>
+</ol>
+
+<h3>投资便利与财政优惠</h3>
+<p>条例详细规定了通过OSS系统申请各类投资便利的程序，主要包括：</p>
+<ul>
+<li><strong>进口关税减免 (Masterlist):</strong> 针对建设或开发工业所需的机器、货物和材料，可申请免征进口关税。</li>
+<li><strong>企业所得税减免 (Tax Holiday):</strong> 为特定行业的先锋产业提供企业所得税减免优惠。</li>
+<li><strong>所得税津贴 (Tax Allowance):</strong> 针对特定行业或地区的投资提供所得税抵扣。</li>
+<li><strong>超级抵扣 (Super Deduction):</strong> 针对开展职业培训（Vokasi）、研发（Litbang）活动的企业提供总收入扣除优惠,。</li>
+<li><strong>经济特区 (KEK) 与新首都 (IKN):</strong> 专门针对这些区域内的投资提供特殊的税收和海关优惠申请通道,。</li>
+</ul>
+
+<h3>外国代表处与特殊实体</h3>
+<p>针对非印尼法人实体的外国商业存在，规定了具体的注册与许可流程：</p>
+<ul>
+<li><strong>外国公司代表处 (KPPA):</strong> 需申请NIB，作为监督、联络或协调机构，不得从事商业交易,。</li>
+<li><strong>外国贸易代表处 (KP3A):</strong> 需申请NIB和SIUP3A，分为一般贸易代表处和电商代表处（PMSE）,。</li>
+<li><strong>外国建筑服务代表处 (BUJKA):</strong> 需申请NIB，并与本地建筑公司组成联合运营（KSO）方可开展业务,。</li>
+<li><strong>外国电力辅助服务代表处 (KPJPTLA):</strong> 需申请NIB及相关许可。</li>
+</ul>
+
+<h3>合规义务与监管 (LKPM)</h3>
+<p>企业在获得许可后必须履行以下义务，否则将面临行政制裁,：</p>
+<ul>
+<li><strong>投资活动报告 (LKPM):</strong> 所有企业（小微企业除外，根据规定）必须定期通过OSS系统提交LKPM。中大型企业需每季度报告一次。</li>
+<li><strong>监管与制裁:</strong> 政府将进行系统化监管（包括现场检查）。违规企业可能面临<strong>书面警告、暂停业务、冻结或许可证撤销</strong>等制裁,。</li>
+<li><strong>社会责任与培训:</strong> 企业需履行企业社会责任（CSR），并对聘用的外籍员工（TKA）实施向印尼员工的技术转移和培训。</li>
+</ul>",
     "originalLink": "https://jdih.bkpm.go.id/id/document/peraturan-menteri-investasi-dan-hilirisasikepala-badan-koordinasi-penanaman-modal-nomor-5-tahun-2025-tentang-pedoman-dan-tata-cara-penyelenggaraan-perizinan-berusaha-berbasis-risiko-dan-fas"
   }
 ]
