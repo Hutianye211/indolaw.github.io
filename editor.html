@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>法律数据编辑器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            opacity: 0.9;
+        }
+
+        .editor-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            color: #333;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .laws-list {
+            margin-bottom: 2rem;
+        }
+
+        .law-item {
+            background: #f9f9f9;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .law-item:hover {
+            background: #f0f0f0;
+        }
+
+        .law-info h3 {
+            color: #667eea;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .law-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .law-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .btn-edit {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-edit:hover {
+            background: #5568d3;
+        }
+
+        .btn-delete {
+            background: #ff4757;
+            color: white;
+        }
+
+        .btn-delete:hover {
+            background: #e84051;
+        }
+
+        .btn-add {
+            background: #2ed573;
+            color: white;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+        }
+
+        .btn-add:hover {
+            background: #26c162;
+        }
+
+        .btn-download {
+            background: #ffa502;
+            color: white;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+        }
+
+        .btn-download:hover {
+            background: #ff9000;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 2rem;
+        }
+
+        .modal-content {
+            background: white;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #999;
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .close-btn:hover {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-group textarea {
+            min-height: 300px;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+        }
+
+        .form-hint {
+            color: #999;
+            font-size: 0.85rem;
+            margin-top: 0.3rem;
+        }
+
+        .btn-save {
+            background: #667eea;
+            color: white;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            margin-right: 1rem;
+        }
+
+        .btn-save:hover {
+            background: #5568d3;
+        }
+
+        .btn-cancel {
+            background: #95a5a6;
+            color: white;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+        }
+
+        .btn-cancel:hover {
+            background: #7f8c8d;
+        }
+
+        .actions-bar {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .help-text {
+            background: #fff3cd;
+            border-left: 4px solid #ffa502;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 5px;
+        }
+
+        .help-text h4 {
+            color: #856404;
+            margin-bottom: 0.5rem;
+        }
+
+        .help-text p {
+            color: #856404;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .law-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .law-actions {
+                margin-top: 1rem;
+                width: 100%;
+            }
+
+            .law-actions button {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 法律数据编辑器</h1>
+            <p>管理印尼投资法律法规数据库</p>
+        </header>
+
+        <div class="help-text">
+            <h4>💡 使用说明</h4>
+            <p>1. 点击"编辑"按钮修改现有法规 | 2. 点击"添加新法规"创建新条目 | 3. 编辑完成后点击"下载 JSON 文件"保存 | 4. 将下载的文件替换 GitHub 仓库中的 laws-data.json</p>
+        </div>
+
+        <div class="editor-section">
+            <h2 class="section-title">现有法规列表</h2>
+            <div class="laws-list" id="lawsList"></div>
+            
+            <div class="actions-bar">
+                <button class="btn btn-add" onclick="showAddModal()">➕ 添加新法规</button>
+                <button class="btn btn-download" onclick="downloadJSON()">💾 下载 JSON 文件</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 编辑/添加模态框 -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <h2 id="modalTitle">编辑法规</h2>
+            
+            <form id="lawForm">
+                <div class="form-group">
+                    <label>ID（自动生成，无需修改）</label>
+                    <input type="number" id="lawId" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>法规标题 *</label>
+                    <input type="text" id="lawTitle" required placeholder="例：投资法 2007年第25号">
+                </div>
+
+                <div class="form-group">
+                    <label>法规编号 *</label>
+                    <input type="text" id="lawNumber" required placeholder="例：Law No. 25/2007">
+                </div>
+
+                <div class="form-group">
+                    <label>分类 *</label>
+                    <select id="lawCategory" required>
+                        <option value="investment">投资法</option>
+                        <option value="company">公司法</option>
+                        <option value="tax">税务法</option>
+                        <option value="labor">劳动法</option>
+                        <option value="trade">贸易法</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>颁布日期 *</label>
+                    <input type="date" id="lawDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label>简短概述 *</label>
+                    <input type="text" id="lawSummary" required placeholder="一句话描述这个法规">
+                </div>
+
+                <div class="form-group">
+                    <label>原链接（可选）</label>
+                    <input type="url" id="lawLink" placeholder="https://peraturan.bpk.go.id/...">
+                    <div class="form-hint">法规官方发布网址，没有可留空</div>
+                </div>
+
+                <div class="form-group">
+                    <label>详细内容（HTML格式）*</label>
+                    <textarea id="lawContent" required placeholder="可以使用 HTML 标签：
+<h3>标题</h3>
+<p>段落内容</p>
+<ul>
+  <li>列表项1</li>
+  <li>列表项2</li>
+</ul>"></textarea>
+                    <div class="form-hint">支持 HTML 标签：&lt;h3&gt;, &lt;p&gt;, &lt;ul&gt;, &lt;li&gt;, &lt;strong&gt; 等</div>
+                </div>
+
+                <div class="actions-bar">
+                    <button type="submit" class="btn btn-save">💾 保存</button>
+                    <button type="button" class="btn btn-cancel" onclick="closeModal()">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let lawsData = [];
+        let editingIndex = -1;
+
+        // 加载现有数据
+        async function loadData() {
+            try {
+                const response = await fetch('laws-data.json');
+                lawsData = await response.json();
+                renderLawsList();
+            } catch (error) {
+                console.error('加载数据失败:', error);
+                lawsData = [];
+                renderLawsList();
+            }
+        }
+
+        // 渲染法规列表
+        function renderLawsList() {
+            const container = document.getElementById('lawsList');
+            
+            if (lawsData.length === 0) {
+                container.innerHTML = '<p style="text-align: center; color: #999;">暂无数据，点击"添加新法规"开始</p>';
+                return;
+            }
+
+            container.innerHTML = lawsData.map((law, index) => `
+                <div class="law-item">
+                    <div class="law-info">
+                        <h3>${law.title}</h3>
+                        <p>${law.number} | ${law.date} | ${getCategoryName(law.category)}</p>
+                    </div>
+                    <div class="law-actions">
+                        <button class="btn btn-edit" onclick="editLaw(${index})">✏️ 编辑</button>
+                        <button class="btn btn-delete" onclick="deleteLaw(${index})">🗑️ 删除</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function getCategoryName(category) {
+            const names = {
+                investment: '投资法',
+                company: '公司法',
+                tax: '税务法',
+                labor: '劳动法',
+                trade: '贸易法'
+            };
+            return names[category] || category;
+        }
+
+        // 显示添加模态框
+        function showAddModal() {
+            editingIndex = -1;
+            document.getElementById('modalTitle').textContent = '添加新法规';
+            document.getElementById('lawForm').reset();
+            
+            // 自动生成新ID
+            const nextId = lawsData.length > 0 ? Math.max(...lawsData.map(l => l.id)) + 1 : 1;
+            document.getElementById('lawId').value = nextId;
+            
+            document.getElementById('editModal').style.display = 'block';
+        }
+
+        // 编辑法规
+        function editLaw(index) {
+            editingIndex = index;
+            const law = lawsData[index];
+            
+            document.getElementById('modalTitle').textContent = '编辑法规';
+            document.getElementById('lawId').value = law.id;
+            document.getElementById('lawTitle').value = law.title;
+            document.getElementById('lawNumber').value = law.number;
+            document.getElementById('lawCategory').value = law.category;
+            document.getElementById('lawDate').value = law.date;
+            document.getElementById('lawSummary').value = law.summary;
+            document.getElementById('lawLink').value = law.originalLink || '';
+            document.getElementById('lawContent').value = law.content;
+            
+            document.getElementById('editModal').style.display = 'block';
+        }
+
+        // 删除法规
+        function deleteLaw(index) {
+            if (confirm(`确定要删除"${lawsData[index].title}"吗？`)) {
+                lawsData.splice(index, 1);
+                renderLawsList();
+            }
+        }
+
+        // 关闭模态框
+        function closeModal() {
+            document.getElementById('editModal').style.display = 'none';
+        }
+
+        // 保存表单
+        document.getElementById('lawForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const lawData = {
+                id: parseInt(document.getElementById('lawId').value),
+                title: document.getElementById('lawTitle').value,
+                number: document.getElementById('lawNumber').value,
+                category: document.getElementById('lawCategory').value,
+                date: document.getElementById('lawDate').value,
+                summary: document.getElementById('lawSummary').value,
+                content: document.getElementById('lawContent').value
+            };
+
+            const link = document.getElementById('lawLink').value.trim();
+            if (link) {
+                lawData.originalLink = link;
+            }
+            
+            if (editingIndex >= 0) {
+                // 编辑现有法规
+                lawsData[editingIndex] = lawData;
+            } else {
+                // 添加新法规
+                lawsData.push(lawData);
+            }
+            
+            // 按 ID 排序
+            lawsData.sort((a, b) => a.id - b.id);
+            
+            renderLawsList();
+            closeModal();
+        });
+
+        // 下载 JSON 文件
+        function downloadJSON() {
+            if (lawsData.length === 0) {
+                alert('没有数据可以下载！');
+                return;
+            }
+
+            const jsonStr = JSON.stringify(lawsData, null, 2);
+            const blob = new Blob([jsonStr], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'laws-data.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            alert('文件已下载！\n\n请将下载的 laws-data.json 文件上传到你的 GitHub 仓库，替换原有文件。');
+        }
+
+        // 点击模态框外部关闭
+        window.onclick = function(event) {
+            const modal = document.getElementById('editModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // 初始加载
+        loadData();
+    </script>
+</body>
+</html>
