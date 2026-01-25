@@ -768,10 +768,8 @@
             contactInfo.classList.toggle('show');
         }
 
-        handleHash();
-        if (currentView === 'list') {
-            renderLaws();
-        }
+        // 页面加载时从 JSON 文件读取数据
+        loadLawsData();
     </script>
 </body>
 </html>
