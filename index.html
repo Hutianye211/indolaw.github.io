@@ -709,7 +709,25 @@
             window.location.hash = `law-${lawId}`;
             window.scrollTo(0, 0);
         }
-
+const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "LegislativeDocument",
+        "name": law.title,
+        "description": law.summary,
+        "datePublished": law.date,
+        "legislationIdentifier": law.number,
+        "url": `https://indo-law.com/#law-${lawId}`
+    };
+    
+    let schemaScript = document.getElementById('schema-data');
+    if (!schemaScript) {
+        schemaScript = document.createElement('script');
+        schemaScript.id = 'schema-data';
+        schemaScript.type = 'application/ld+json';
+        document.head.appendChild(schemaScript);
+    }
+    schemaScript.textContent = JSON.stringify(schemaData);
+}
         function goHome() {
             showList();
             window.location.hash = '';
