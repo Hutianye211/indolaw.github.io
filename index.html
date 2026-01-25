@@ -590,14 +590,32 @@
         </div>
     </footer>
 
-    <!-- 引入法律数据文件 -->
-    <script src="laws-data.js"></script>
-    
     <!-- 主程序代码 -->
     <script>
+        let laws = []; // 法律数据将从 JSON 文件加载
         let currentCategory = 'all';
         let searchTerm = '';
         let currentView = 'list';
+
+        // 从 JSON 文件加载数据
+        async function loadLawsData() {
+            try {
+                const response = await fetch('laws-data.json');
+                if (!response.ok) {
+                    throw new Error('无法加载数据文件');
+                }
+                laws = await response.json();
+                
+                // 数据加载完成后初始化页面
+                handleHash();
+                if (currentView === 'list') {
+                    renderLaws();
+                }
+            } catch (error) {
+                console.error('加载数据失败:', error);
+                document.getElementById('lawsGrid').innerHTML = '<div class="no-results">数据加载失败，请刷新页面重试</div>';
+            }
+        }
 
         // 页面路由
         function showList() {
