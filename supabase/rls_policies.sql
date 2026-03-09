@@ -25,8 +25,8 @@ CREATE POLICY "admin_only_update_articles"
 ON public.articles
 FOR UPDATE
 TO authenticated
-USING (lower(auth.jwt() ->> 'email') = 'your-admin-email@example.com')
-WITH CHECK (lower(auth.jwt() ->> 'email') = 'your-admin-email@example.com');
+USING (lower(auth.jwt() ->> 'email') = 'hutianye2012@gmail.com')
+WITH CHECK (lower(auth.jwt() ->> 'email') = 'hutianye2012@gmail.com');
 
 -- 5) Only admin can delete
 -- Replace with your real admin email
@@ -35,4 +35,4 @@ CREATE POLICY "admin_only_delete_articles"
 ON public.articles
 FOR DELETE
 TO authenticated
-USING (lower(auth.jwt() ->> 'email') = 'your-admin-email@example.com');
+USING (lower(auth.jwt() ->> 'email') = 'hutianye2012@gmail.com');
