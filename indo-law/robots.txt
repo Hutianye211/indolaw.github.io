@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+
+# 国际 AI
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GoogleExtended
+Allow: /
+
+# 字节跳动
+User-agent: Bytespider
+Allow: /
+
+# 百度
+User-agent: Baiduspider
+Allow: /
+
+User-agent: baiduspider-render
+Allow: /
+
+# 360
+User-agent: 360Spider
+Allow: /
+
+# 搜狗
+User-agent: Sogou web spider
+Allow: /
+
+Sitemap: https://indo-law.top/sitemap.xml

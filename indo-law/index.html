@@ -552,7 +552,7 @@
   const ADMIN_EMAIL_ALLOWLIST = [
     'hutianye2012@gmail.com'
   ];
-  const ADMIN_TOKEN_STORAGE_KEY = 'qazqwe1234';
+  const ADMIN_TOKEN_STORAGE_KEY = 'inkwell_admin_access_token';
 
   // ── State ──
   let articles = [];
@@ -625,65 +625,10 @@
       body: JSON.stringify({ email, password })
     });
     if (!res.ok) {
-      const raw = await res.text();
-      let parsedMsg = raw;
-      try {
-        const json = JSON.parse(raw);
-        if (json.error_code === 'invalid_credentials') {
-          parsedMsg = '账号或密码错误。若你未设置 Supabase 密码，请留空密码改用邮箱魔法链接登录。';
-        } else {
-          parsedMsg = json.msg || json.error_description || raw;
-        }
-      } catch (_) {
-        // Keep raw text if response is not JSON.
-      }
-      throw new Error(parsedMsg || '管理员登录失败');
+      const err = await res.text();
+      throw new Error(err || '管理员登录失败');
     }
     return res.json();
-  }
-
-  async function sendAdminMagicLink(email) {
-    const res = await fetch(SUPABASE_URL + '/auth/v1/otp', {
-      method: 'POST',
-      headers: {
-        'apikey': SUPABASE_ANON_KEY,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        email,
-        create_user: false,
-        data: { role: 'admin' },
-        email_redirect_to: window.location.origin + window.location.pathname
-      })
-    });
-    if (!res.ok) {
-      const err = await res.text();
-      throw new Error(err || '发送魔法链接失败');
-    }
-  }
-
-  async function restoreAdminFromUrlHash() {
-    const hash = new URLSearchParams((window.location.hash || '').replace(/^#/, ''));
-    const accessToken = hash.get('access_token');
-    if (!accessToken) return;
-
-    try {
-      const user = await fetchCurrentUser(accessToken);
-      if (!currentUserIsAdmin(user)) {
-        showToast('该账号没有管理员权限');
-      } else {
-        adminAccessToken = accessToken;
-        adminUser = user;
-        isAdmin = true;
-        localStorage.setItem(ADMIN_TOKEN_STORAGE_KEY, adminAccessToken);
-        showToast('管理员登录成功');
-      }
-    } catch (e) {
-      showToast('魔法链接登录失败：' + e.message);
-    } finally {
-      history.replaceState(null, '', window.location.pathname + window.location.search);
-      updatePermissionUI();
-    }
   }
 
   async function restoreAdminSession() {
@@ -725,16 +670,8 @@
 
     const email = window.prompt('请输入管理员邮箱');
     if (!email) return;
-    const password = window.prompt('请输入管理员密码（留空则发送邮箱魔法链接）');
-    if (!password) {
-      try {
-        await sendAdminMagicLink(email.trim());
-        showToast('魔法登录链接已发送到邮箱，请在邮件中点击登录');
-      } catch (e) {
-        showToast('发送失败：' + e.message);
-      }
-      return;
-    }
+    const password = window.prompt('请输入管理员密码');
+    if (!password) return;
 
     try {
       const data = await signInAsAdmin(email.trim(), password);
@@ -1023,7 +960,6 @@
 
   // ── Init ──
   async function initApp() {
-    await restoreAdminFromUrlHash();
     await restoreAdminSession();
     await loadAndRender();
   }
